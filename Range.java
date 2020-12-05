@@ -9,6 +9,9 @@ public class Range implements IntegerSequence
 
   public Range(int start, int end)
   {
+    start = start;
+    end = end;
+    current = start; 
 
   }
 
