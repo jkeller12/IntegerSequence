@@ -4,11 +4,11 @@ public class RangeTester {
 
 	public static void main(String[] args) {
 		boolean failure = false;
-		failure = failure || constructorTester(1000);
-		failure = failure || lengthTester(1000);
-		failure = failure || hasNextTester(1000);
-		failure = failure || nextTester(1000);
-		failure = failure || resetTester(1000);
+		failure = failure || constructorTester(10);
+		failure = failure || lengthTester(10);
+		failure = failure || hasNextTester(10);
+		failure = failure || nextTester(10);
+		failure = failure || resetTester(10);
 
 		System.out.println("\n ~~~ Overall Result ~~~");
 		if (failure) {
@@ -114,6 +114,7 @@ public class RangeTester {
 				fail = true;
 				System.out.println("Start: " + start);
 				System.out.println("End: " + end);
+			//	System.out.println("");
 				System.out.println("Expected: " + equivalent.size());
 				System.out.println("Actual: " + r.length());
 			}

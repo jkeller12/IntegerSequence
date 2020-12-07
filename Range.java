@@ -1,5 +1,5 @@
 import java.util.NoSuchElementException;
-
+///import java.util.IllegalArgumentException;
 public class Range implements IntegerSequence
 {
   private int start, end, current;
@@ -10,6 +10,10 @@ public class Range implements IntegerSequence
   public Range(int start, int end)
   {
     this.start = start;
+    if(end < start)
+    {
+      throw new IllegalArgumentException("woopd");
+    }
     this.end = end;
     this.current = start;
 
@@ -24,7 +28,8 @@ public class Range implements IntegerSequence
 
   public int length()
   {
-    return end - start;
+
+    return end - start + 1;
 
   }
 
@@ -43,7 +48,7 @@ public class Range implements IntegerSequence
     // value by 1.
     if(!hasNext())
     {
-      throw new NoSuchElementException();
+      throw new NoSuchElementException("woopd");
     }
     return current++;
 
