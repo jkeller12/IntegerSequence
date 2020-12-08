@@ -31,12 +31,27 @@ public class ArraySequence implements IntegerSequence
   {
     return data.length;
 
-  }     //returns the total length of the sequence
+  }
 
   public void reset()
   {
     currentIndex = 0;
 
-  }     //start over from the start of the sequence
+  }
+
+  public ArraySequence(IntegerSequence otherseq)
+  {
+
+    for(int i = 0; i < otherseq.length(); i++)
+    {
+      data[i] = otherseq.next();
+    }
+    otherseq.reset(); 
+
+
+    // Postcondition: otherseq will be reset
+
+
+  }
 
 }
