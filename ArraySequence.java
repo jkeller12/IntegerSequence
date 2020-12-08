@@ -11,6 +11,7 @@ public class ArraySequence implements IntegerSequence
     {
       data[i] = other[i];
     }
+    currentIndex = 0 ; 
   }
 
   public boolean hasNext()
@@ -24,7 +25,7 @@ public class ArraySequence implements IntegerSequence
     {
       throw new NoSuchElementException("woopd");
     }
-    return data[currentIndex ++];
+    return data[currentIndex++];
   }
 
   public int length()
@@ -46,7 +47,7 @@ public class ArraySequence implements IntegerSequence
     {
       data[i] = otherseq.next();
     }
-    otherseq.reset(); 
+    otherseq.reset();
 
 
     // Postcondition: otherseq will be reset
