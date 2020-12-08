@@ -48,7 +48,7 @@ public class Range implements IntegerSequence
     // value by 1.
     if(!hasNext())
     {
-      throw new NoSuchElementException("woopd");
+      throw new NoSuchElementException("error w/ Range?");
     }
     return current++;
 
