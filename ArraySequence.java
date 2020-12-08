@@ -13,9 +13,9 @@ public class ArraySequence implements IntegerSequence
     }
   }
 
-  pubic boolean hasNext
+  public boolean hasNext()
   {
-    return (current >= 0 && current <= data.length);
+    return (currentIndex >= 0 && currentIndex <= data.length);
   } //does the sequence have more elements?
 
   public int next()
@@ -24,16 +24,18 @@ public class ArraySequence implements IntegerSequence
     {
       throw new NoSuchElementException("woopd");
     }
-    return data[currentIndex++];
+    return data[currentIndex ++];
   }
 
   public int length()
   {
+    return data.length;
 
   }     //returns the total length of the sequence
 
   public void reset()
   {
+    currentIndex = 0;
 
   }     //start over from the start of the sequence
 
