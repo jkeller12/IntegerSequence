@@ -5,11 +5,11 @@ public class ArraySequenceTester {
   public static void main(String[] args) {
 		boolean failure = false;
 		failure = failure || constructorTester(10);
-		failure = failure || lengthTester(10);
+	/*	failure = failure || lengthTester(10);
 		failure = failure || hasNextTester(10);
 		failure = failure || nextTester(10);
 		failure = failure || resetTester(10);
-
+*/
 		System.out.println("\n ~~~ Overall Result ~~~");
 		if (failure) {
 			System.out.println("Coal for you!");
@@ -77,8 +77,9 @@ public class ArraySequenceTester {
 				System.out.println("Nums: " + nums);
 			}
 		}
+    return fail; 
   }
-
+/*
   public static boolean lengthTester(int tests) {
 		tester("lengthTester");
 		boolean fail = false;
@@ -115,4 +116,5 @@ public class ArraySequenceTester {
 		methodMessage("lengthTester", fail);
 		return fail;
 	}
+  */
 }
